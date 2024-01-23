@@ -1,67 +1,25 @@
 console.log('index');
-/*
-let productName = 'Гарбузики';
-let productCount = 3;
-let productCategory = 'Овочі';
-let productPrice = 20;
 
-console.log(productName);
-console.log(productCount);
-console.log(productCategory);
-console.log(productPrice);
-
-console.log(productName,'Це',productCategory);
-console.warn(productCount*productPrice); 
-*/
-/*
-const productName = prompt('Введите Наименование товара');
-const productCount = + prompt('Введите количество товара');
-const productCategory = prompt('Введите категорию товара');
-const productPrice = + prompt('Введите цену товара');
-
-
-console.log(productCount);
-console.log(typeof productCount);
-console.log(productPrice);
-console.log(typeof productPrice);
-
-console.log('На складі',productCount,'одиниці товару',productName,'в категорії',productCategory,'на загальну сумму',productCount*productPrice,'гривнів')
-*/
 
 const productName = prompt('Введите Наименование товара');
-const productCount = prompt('Введите количество товара');
 
-if (productCount <= Number){
-//  console.log('Вы ввели некорректные данные');
+const productCount =+ prompt('Введите количество товара');
 
+let chekin = (`Number.isNaN(${productCount}) `, Number.isNaN(productCount));
+
+if (chekin === false){
   const productCategory = prompt('Введите категорию товара');
-  const productPrice = prompt('Введите цену товара');
+  const productPrice =+ prompt('Введите цену товара');
+  let chekinTwo = (`Number.isNaN(${productPrice}) `, Number.isNaN(productPrice));
 
-
-
-  if (productPrice<= Number){
-    console.log(productCount);
-    console.log(typeof productCount);
-    console.log(productPrice);
-    console.log(typeof productPrice);
-    console.log('На складі',productCount,'одиниці товару',productName,'в категорії',productCategory,'на загальну сумму',productCount*productPrice,'гривнів')
+  if (chekinTwo === false){
+    console.log('На складі', productCount, 'одиниці товару', productName, 'в категорії', productCategory, 'на загальну сумму', productCount * productPrice, 'гривнів');
+  }else if (chekinTwo === true){
+    console.log('Вы ввели некорректные данные, Шарик ты огромный балбес');
   }
 
-  if (productPrice>= Number){
-    console.log('Вы ввели некорректные данные');
-  }
-}
+  else 
 
-if (productCount >= Number){
-  console.log('Вы ввели некорректные данные');
-}
-
-
-
-//if (productPrice >= Number){
-//  console.log('Вы ввели некорректные данные');
-//}
-
-
-
-
+    if (chekin === true){
+    console.log('Вы ввели некорректные данные, Шарик ты балбес');
+};
